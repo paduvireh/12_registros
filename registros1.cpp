@@ -14,14 +14,15 @@ int main(){
 	empleado E[n];
 	
 	for(int i=0; i<n; i++){
-		cout<<"Ingrese el nombre del empleado "<<i+1<<": ";	
+		cout<<endl;
+		cout<<"Ingrese el nombre del empleado #"<<i+1<<": ";	
 		cin.ignore();
 		getline(cin, E[i].nombre);
 	
-		cout<<"Ingrese el sexo del empleado "<<i+1<<" (M/F): ";
+		cout<<"Ingrese el sexo del empleado #"<<i+1<<" (M/F): ";
 		cin>>E[i].sexo;
 	
-		cout<<"Ingrese el sueldo del empleado "<<i+1<<": ";
+		cout<<"Ingrese el sueldo del empleado #"<<i+1<<": ";
 		cin>>E[i].sueldo;
 	}
 		
@@ -34,16 +35,16 @@ int main(){
 			imin=i;	
 	}
 	cout<<endl;
-	cout<<"Empleado con mayor salario:"<<endl;
-	cout<<"NOMBRE: "<<E[imax].nombre<<endl;
-	cout<<"SEXO: "<<E[imax].sexo<<endl;
-	cout<<"SUELDO: "<<E[imax].sueldo<<endl;
+	cout<<"Empleado con mayor salario:"<<endl<<endl;
+	cout<<" - NOMBRE: "<<E[imax].nombre<<endl;
+	cout<<" - SEXO: "<<E[imax].sexo<<endl;
+	cout<<" - SUELDO: "<<E[imax].sueldo<<endl;
 
 	cout<<endl;
-	cout<<"Empleado con menor salario:"<<endl;
-	cout<<"NOMBRE: "<<E[imin].nombre<<endl;
-	cout<<"SEXO: "<<E[imin].sexo<<endl;
-	cout<<"SUELDO: "<<E[imin].sueldo<<endl;
+	cout<<"Empleado con menor salario:"<<endl<<endl;
+	cout<<" - NOMBRE: "<<E[imin].nombre<<endl;
+	cout<<" - SEXO: "<<E[imin].sexo<<endl;
+	cout<<" - SUELDO: "<<E[imin].sueldo<<endl;
 
 	return 0;
 }
