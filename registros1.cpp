@@ -23,7 +23,16 @@ int main(){
 	
 		cout<<"Ingrese el sueldo del empleado "<<i+1<<": ";
 		cin>>E[i].sueldo;
-
 	}
+		
+	int imax=0;
+	
+	for(int i=1; i<n; i++){
+		if(E[i].sueldo>E[imax].sueldo)
+			imax=i;	
+	}
+	cout<<endl;
+	cout<<"MAYOR SUELDO: "<<E[imax].sueldo<<endl;
+
 	return 0;
 }
