@@ -25,14 +25,17 @@ int main(){
 		cin>>E[i].sueldo;
 	}
 		
-	int imax=0;
+	int imax=0, imin=0;
 	
 	for(int i=1; i<n; i++){
 		if(E[i].sueldo>E[imax].sueldo)
 			imax=i;	
+		if(E[i].sueldo<E[imin].sueldo)
+			imin=i;	
 	}
 	cout<<endl;
 	cout<<"MAYOR SUELDO: "<<E[imax].sueldo<<endl;
+	cout<<"MENOR SUELDO: "<<E[imin].sueldo<<endl;
 
 	return 0;
 }
