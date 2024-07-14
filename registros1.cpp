@@ -34,8 +34,16 @@ int main(){
 			imin=i;	
 	}
 	cout<<endl;
-	cout<<"MAYOR SUELDO: "<<E[imax].sueldo<<endl;
-	cout<<"MENOR SUELDO: "<<E[imin].sueldo<<endl;
+	cout<<"Empleado con mayor salario:"<<endl;
+	cout<<"NOMBRE: "<<E[imax].nombre<<endl;
+	cout<<"SEXO: "<<E[imax].sexo<<endl;
+	cout<<"SUELDO: "<<E[imax].sueldo<<endl;
+
+	cout<<endl;
+	cout<<"Empleado con menor salario:"<<endl;
+	cout<<"NOMBRE: "<<E[imin].nombre<<endl;
+	cout<<"SEXO: "<<E[imin].sexo<<endl;
+	cout<<"SUELDO: "<<E[imin].sueldo<<endl;
 
 	return 0;
 }
