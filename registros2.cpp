@@ -34,16 +34,21 @@ int main(){
 		S=S+P[i].edad;
 		prom=float(S)/n;
 	}
+	cout<<endl;
 	cout<<"La cantidad de personas mayores a 50 anos es: "<<may50<<endl;
-	cout<<"El promedio de edades es: "<<prom<<endl;
+	cout<<"El promedio de edades es: "<<prom<<endl<<endl;
 
-	cout<<"DATOS DE LAS PERSONAS INGRESADAS: "<<endl;
+	cout<<"-------------------------------------------"<<endl<<endl;
+	cout<<"     DATOS DE LAS PERSONAS INGRESADAS     "<<endl;
 	for(int i=0; i<n; i++){	
-		cout<<"PERSONA #"<<i+1<<": "<<endl;
-		cout<<"Nombre: "<<P[i].nombre<<endl;
-		cout<<"DNI: "<<P[i].DNI<<endl;
-		cout<<"Edad: "<<P[i].edad<<endl;
+		cout<<endl;
+		cout<<"--------------- PERSONA #"<<i+1<<": ---------------"<<endl<<endl;
+		cout<<" - Nombre: "<<P[i].nombre<<endl;
+		cout<<" - DNI: "<<P[i].DNI<<endl;
+		cout<<" - Edad: "<<P[i].edad<<endl;
 	}
-
+	cout<<endl;
+	cout<<"-------------------------------------------"<<endl<<endl;
+	
 	return 0;
 }
