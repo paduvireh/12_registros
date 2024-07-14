@@ -13,6 +13,8 @@ int main(){
 	cout<<"Ingrese el numero de personas: "; cin>>n;
 	persona P[n];
 	
+	int may50=0;
+	
 	for(int i=0; i<n; i++){
 		cout<<endl;
 		cout<<"Ingrese el nombre de la persona #"<<i+1<<": ";	
@@ -23,8 +25,12 @@ int main(){
 		cin>>P[i].DNI;
 	
 		cout<<"Ingrese la edad de la persona #"<<i+1<<": ";
-		cin>>P[i].edad;
+			cin>>P[i].edad;
+				
+		if(P[i].edad>50)
+			may50++;
 	}
-	
+	cout<<"La cantidad de personas mayores a 50 anos es: "<<may50<<endl;
+
 	return 0;
 }
