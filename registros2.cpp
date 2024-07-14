@@ -14,6 +14,7 @@ int main(){
 	persona P[n];
 	
 	int may50=0, S=0;
+	float prom=0;
 	
 	for(int i=0; i<n; i++){
 		cout<<endl;
@@ -31,8 +32,10 @@ int main(){
 			may50++;
 		
 		S=S+P[i].edad;
+		prom=float(S)/n;
 	}
 	cout<<"La cantidad de personas mayores a 50 anos es: "<<may50<<endl;
+	cout<<"El promedio de edades es: "<<prom<<endl;
 
 	return 0;
 }
