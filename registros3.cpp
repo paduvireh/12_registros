@@ -28,5 +28,17 @@ int main(){
         cout<<"Ingrese el ano de nacimiento de la persona #"<<i+1<<": ";
         cin>>P[i].ano;
     }
+    
+    int nmes;
+    cout<<"Ingrese un numero de mes para consultar: "; cin>>nmes;
+        
+    for(int i=0; i<n; i++){
+        if(P[i].mes==nmes){
+            cout<<"Nombre: "<<P[i].nombre<<endl;
+			cout<<"Dia: "<<P[i].dia<<endl;
+            cout<<"Ano: "<<P[i].ano<<endl;
+	    }
+    }  
+        
     return 0;
 }
