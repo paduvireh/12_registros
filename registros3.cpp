@@ -15,7 +15,8 @@ int main(){
     persona P[n];
 
     for(int i=0; i<n; i++){
-        cout<<"Ingrese el nombre de la persona "<<i+1<<": ";
+        cout<<endl;
+		cout<<"Ingrese el nombre de la persona #"<<i+1<<": ";
         cin.ignore();
         getline(cin, P[i].nombre);
 
@@ -31,19 +32,20 @@ int main(){
     
     int nmes;
     do{
+		cout<<endl;
 		cout<<"Ingrese un numero de mes para consultar: "; cin>>nmes;
     
 		int c=0;    
 	    for(int i=0; i<n; i++){
 	        if(P[i].mes==nmes){
-	            cout<<"Nombre: "<<P[i].nombre<<endl;
-				cout<<"Dia: "<<P[i].dia<<endl;
-	            cout<<"Ano: "<<P[i].ano<<endl;
+	            cout<<endl;
+				cout<<" - Nombre: "<<P[i].nombre<<endl;
+				cout<<" - Fecha de nacimiento: "<<P[i].dia<<" / "<<P[i].mes<<" / "<<P[i].ano<<endl;
 	            c++;
 		    }
 	    } 
 		if(c==0)
-			cout<<"No existen personas registradas que cumplan anos ese mes."<<endl;
+			cout<<"\n - No existen personas registradas que cumplan anos ese mes."<<endl;
 			
 	} while(nmes!=0);
         
