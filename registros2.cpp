@@ -4,7 +4,7 @@ using namespace std;
 
 struct persona{
 	string nombre;
-	int DNI;
+	string DNI;
 	int edad;
 };
 
