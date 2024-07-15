@@ -27,6 +27,20 @@ int main(){
 
         cout<<"Ingrese el numero de medallas del atleta #"<<i+1<<": ";
         cin>>A[i].nmedallas;
+        cin.ignore();
     }
+    
+    string mpais;
+    cout<<"Ingrese el nombre del pais para consultar: ";
+    getline(cin, mpais);
+
+    for(int i=0; i<n; i++){
+        if(A[i].pais==mpais){
+            cout<<"Nombre: "<<A[i].nombre<<endl;
+            cout<<"Disciplina: "<<A[i].disciplina<<endl;
+            cout<<"Numero de medallas: "<<A[i].nmedallas<<endl;
+		}
+	}
+    
     return 0;
 }
