@@ -38,13 +38,15 @@ int main(){
 
 	cout<<endl;
 	cout<<"----------- REGISTRO DE ATLETAS DE "<<mpais<<" -----------"<<endl<<endl;
+	int c=0;
     for(int i=0; i<n; i++){
         if(A[i].pais==mpais){
             cout<<" - Nombre: "<<A[i].nombre<<endl;
             cout<<" - Disciplina: "<<A[i].disciplina<<endl;
             cout<<" - Numero de medallas: "<<A[i].nmedallas<<endl;
             cout<<endl;
-		}
+		} else
+			c=1;
 	}
     
 	int imax=0;
@@ -54,10 +56,14 @@ int main(){
 				imax=i;
 		}
 	}
-	cout<<"---------------------------------------------------"<<endl;
-    cout<<"Atleta de "<<mpais<<" con mas medallas: "<< endl;
-	cout<<A[imax].nombre<<endl;
-	cout<<"---------------------------------------------------"<<endl;
+	
+	if(c==0){
+		cout<<"---------------------------------------------------"<<endl;
+    	cout<<"Atleta de "<<mpais<<" con mas medallas: "<< endl;
+		cout<<A[imax].nombre<<endl;
+		cout<<"---------------------------------------------------"<<endl;	
+	} else
+		cout<<"No existen atletas registrados de ese pais."<<endl;
     
     return 0;
 }
