@@ -31,14 +31,18 @@ int main(){
     
     int nmes;
     cout<<"Ingrese un numero de mes para consultar: "; cin>>nmes;
-        
+    
+	int c=0;    
     for(int i=0; i<n; i++){
         if(P[i].mes==nmes){
             cout<<"Nombre: "<<P[i].nombre<<endl;
 			cout<<"Dia: "<<P[i].dia<<endl;
             cout<<"Ano: "<<P[i].ano<<endl;
+            c++;
 	    }
-    }  
+    } 
+	if(c==0)
+		cout<<"No existen personas registradas que cumplan anos ese mes."<<endl;
         
     return 0;
 }
