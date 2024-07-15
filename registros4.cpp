@@ -16,7 +16,8 @@ int main(){
 	cin.ignore(); 
 
     for(int i=0; i<n; i++) {
-        cout<<"Ingrese el nombre del atleta #"<<i+1<<": ";
+        cout<<endl;
+		cout<<"Ingrese el nombre del atleta #"<<i+1<<": ";
         getline(cin, A[i].nombre);
 
         cout<<"Ingrese el pais del atleta #"<<i+1<<": ";
@@ -31,14 +32,18 @@ int main(){
     }
     
     string mpais;
+    cout<<endl;
     cout<<"Ingrese el nombre del pais para consultar: ";
     getline(cin, mpais);
 
+	cout<<endl;
+	cout<<"----------- REGISTRO DE ATLETAS DE "<<mpais<<" -----------"<<endl<<endl;
     for(int i=0; i<n; i++){
         if(A[i].pais==mpais){
-            cout<<"Nombre: "<<A[i].nombre<<endl;
-            cout<<"Disciplina: "<<A[i].disciplina<<endl;
-            cout<<"Numero de medallas: "<<A[i].nmedallas<<endl;
+            cout<<" - Nombre: "<<A[i].nombre<<endl;
+            cout<<" - Disciplina: "<<A[i].disciplina<<endl;
+            cout<<" - Numero de medallas: "<<A[i].nmedallas<<endl;
+            cout<<endl;
 		}
 	}
     
@@ -49,8 +54,10 @@ int main(){
 				imax=i;
 		}
 	}
+	cout<<"---------------------------------------------------"<<endl;
     cout<<"Atleta de "<<mpais<<" con mas medallas: "<< endl;
 	cout<<A[imax].nombre<<endl;
+	cout<<"---------------------------------------------------"<<endl;
     
     return 0;
 }
