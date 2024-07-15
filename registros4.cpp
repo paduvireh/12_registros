@@ -42,5 +42,15 @@ int main(){
 		}
 	}
     
+	int imax=0;
+	for(int i=1; i<n; i++){
+        if(A[i].pais==mpais){
+			if(A[i].nmedallas>A[imax].nmedallas)
+				imax=i;
+		}
+	}
+    cout<<"Atleta de "<<mpais<<" con mas medallas: "<< endl;
+	cout<<A[imax].nombre<<endl;
+    
     return 0;
 }
